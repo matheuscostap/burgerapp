@@ -19,13 +19,13 @@ class MainViewModel @Inject constructor(
     private val getDayOfferUseCase: GetDayOfferUseCase
 ): ViewModel() {
 
-    private val allProductsPrivateState = MutableStateFlow<ViewState<List<UiObject>>>(ViewState.Loading)
-    val allProductsState: StateFlow<ViewState<List<UiObject>>> get() = allProductsPrivateState
+    private val _state = MutableStateFlow<ViewState<List<UiObject>>>(ViewState.Loading)
+    val state: StateFlow<ViewState<List<UiObject>>> get() = _state
 
 
     fun getAllProducts() {
         viewModelScope.launch {
-            allProductsPrivateState.value = ViewState.Loading
+            _state.value = ViewState.Loading
             try {
                 val mapper = UiObjectMapper()
 
@@ -35,9 +35,9 @@ class MainViewModel @Inject constructor(
                 val page = mapper.mapSections(sections).toMutableList()
                 page.add(0, mapper.mapDayOffer(dayOffer))
 
-                allProductsPrivateState.value = ViewState.Success(page)
+                _state.value = ViewState.Success(page)
             } catch (t: Throwable) {
-                allProductsPrivateState.value = ViewState.Error(t, false)
+                _state.value = ViewState.Error(t, false)
             }
         }
     }
