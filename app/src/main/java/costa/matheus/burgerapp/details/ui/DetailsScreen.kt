@@ -9,7 +9,9 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.ExperimentalMaterial3Api
@@ -89,6 +91,7 @@ fun DetailsScreen(
                             fontSize = 22.sp,
                             color = Color.Black,
                             modifier = Modifier
+                                .weight(0.5f)
                                 .fillMaxWidth()
                         )
 
@@ -101,9 +104,19 @@ fun DetailsScreen(
                                 .padding(top = 8.dp)
                         )
 
-                        NutritionFactsBlock(product = product)
+                        Column(
+                            modifier = Modifier
+                                .weight(2f)
+                        ){
+                            NutritionFactsBlock(product = product)
+                        }
 
-                        AllergenBlock(product = product)
+                        Column(
+                            modifier = Modifier
+                                .weight(2f)
+                        ){
+                            AllergenBlock(product = product)
+                        }
 
                         Text(
                             text = product.price,
@@ -111,6 +124,7 @@ fun DetailsScreen(
                             color = Color.Black,
                             textAlign = TextAlign.End,
                             modifier = Modifier
+                                .weight(0.5f)
                                 .fillMaxWidth()
                         )
                     }
@@ -145,29 +159,38 @@ fun DetailsTopAppBar(
 
 @Composable
 fun NutritionFactsBlock(product: Product) {
-    Row (
-        horizontalArrangement = Arrangement.SpaceEvenly,
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.spacedBy(8.dp),
         modifier = Modifier
-            .background(Color.White)
-            .fillMaxWidth()
-            .padding(top = 16.dp)
-    ){
-        NutritionFactsItem(
-            name = "Calorias",
-            value = product.calories
-        )
-        NutritionFactsItem(
-            name = "Gordura Total",
-            value = product.totalFat
-        )
-        NutritionFactsItem(
-            name = "Carboidratos",
-            value = product.carbohydrates
-        )
-        NutritionFactsItem(
-            name = "Proteínas",
-            value = product.proteins
-        )
+            .fillMaxSize()
+            .padding(top = 24.dp)
+    ) {
+        Row (
+            horizontalArrangement = Arrangement.SpaceEvenly
+        ){
+            NutritionFactsItem(
+                name = "Calorias",
+                value = product.calories
+            )
+            NutritionFactsItem(
+                name = "Gordura",
+                value = product.totalFat
+            )
+        }
+
+        Row(
+            horizontalArrangement = Arrangement.SpaceEvenly
+        ) {
+            NutritionFactsItem(
+                name = "Carboidratos",
+                value = product.carbohydrates
+            )
+            NutritionFactsItem(
+                name = "Proteínas",
+                value = product.proteins
+            )
+        }
     }
 }
 
@@ -185,6 +208,7 @@ fun NutritionFactsItem(
     Column(
         horizontalAlignment = Alignment.CenterHorizontally,
         modifier = Modifier
+            .width(100.dp)
             .background(Color.White)
     ) {
         Text(
@@ -197,7 +221,9 @@ fun NutritionFactsItem(
         Text(
             text = name,
             fontSize = 16.sp,
-            textAlign = TextAlign.Center
+            textAlign = TextAlign.Center,
+            overflow = TextOverflow.Ellipsis,
+            maxLines = 1
         )
     }
 }
@@ -216,8 +242,7 @@ fun AllergenBlock(product: Product) {
     Row (
         horizontalArrangement = Arrangement.SpaceEvenly,
         modifier = Modifier
-            .background(Color.White)
-            .fillMaxWidth()
+            .fillMaxSize()
             .padding(top = 16.dp)
     ){
         if (product.allergen.egg) {
