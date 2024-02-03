@@ -6,9 +6,9 @@ import retrofit2.http.GET
 
 interface BurgerDataSource {
 
-    @GET("/matheuscostap/burger/master/api.json")
+    @GET("/matheuscostap/burgerapp/main/api.json")
     suspend fun getAllProducts(): ProductsPageResponse
 
-    @GET("/matheuscostap/burger/master/dayoffer.json")
+    @GET("/matheuscostap/burgerapp/main/dayoffer.json")
     suspend fun getDayOffer(): DayOfferModel
 }

@@ -13,7 +13,7 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "BurgerApp"
+rootProject.name = "burgerapp"
 include(":app")
 include(":data")
 include(":domain")
