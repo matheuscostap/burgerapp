@@ -7,3 +7,5 @@ abstract class ProductsPageEvent
 data class OnProductClick(
     val product: Product
 ): ProductsPageEvent()
+
+object OnTryAgainClick: ProductsPageEvent()

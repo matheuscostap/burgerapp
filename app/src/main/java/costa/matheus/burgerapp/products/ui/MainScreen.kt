@@ -29,9 +29,7 @@ fun MainScreen(
         ) {
             when(state) {
                 is ViewState.Loading -> {
-                    Column {
-                        Text(text = "Carregando...")
-                    }
+                    LoadingPage()
                 }
 
                 is ViewState.Success -> {
@@ -42,9 +40,7 @@ fun MainScreen(
                 }
 
                 is ViewState.Error -> {
-                    Column {
-                        Text(text = "Erro!")
-                    }
+                    ErrorPage(onEvent = onEvent)
                 }
             }
         }

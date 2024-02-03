@@ -18,6 +18,7 @@ import androidx.lifecycle.lifecycleScope
 import costa.matheus.burgerapp.details.DetailsActivity
 import costa.matheus.burgerapp.products.ui.MainScreen
 import costa.matheus.burgerapp.products.ui.OnProductClick
+import costa.matheus.burgerapp.products.ui.OnTryAgainClick
 import costa.matheus.burgerapp.products.ui.ProductsPageEvent
 import costa.matheus.burgerapp.ui.theme.BurgerAppTheme
 import dagger.hilt.android.AndroidEntryPoint
@@ -51,6 +52,10 @@ class MainActivity : ComponentActivity() {
                 val intent = Intent(this, DetailsActivity::class.java)
                 intent.putExtra(DetailsActivity.PRODUCT_EXTRA, event.product)
                 startActivity(intent)
+            }
+
+            is OnTryAgainClick -> {
+                viewModel.getAllProducts()
             }
         }
     }
