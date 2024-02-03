@@ -5,42 +5,102 @@
       "description": "01 McLanche Feliz e 01 McOferta média.",
       "image": "https://cache-backend-mcd.mcdonaldscupones.com/media/image/product$k7XnunEc/200/200/original?country=br",
       "price": "R$ 29.99",
-      "promotional_price": null
+      "promotional_price": null,
+      "calories": "295kcal",
+      "total_fat": "15g",
+      "carbohydrates": "35g",
+      "proteins": "4.8g",
+      "allergen": {
+        "egg": false,
+        "milk": false,
+        "gluten": false,
+        "soy": true
+      }
     },
     {
       "name": "Family Box para 3",
       "description": "01 McLanche Feliz e 02 McOfertas médias.",
       "image": "https://cache-backend-mcd.mcdonaldscupones.com/media/image/product$k7XpydJF/200/200/original?country=br",
       "price": "R$ 39.99",
-      "promotional_price": null
+      "promotional_price": null,
+      "calories": "295kcal",
+      "total_fat": "15g",
+      "carbohydrates": "35g",
+      "proteins": "4.8g",
+      "allergen": {
+        "egg": false,
+        "milk": false,
+        "gluten": false,
+        "soy": true
+      }
     },
     {
       "name": "Méqui Box Clássico para 3",
       "description": "03 McOfertas médias.",
       "image": "https://cache-backend-mcd.mcdonaldscupones.com/media/image/product$ksX1gYQG/200/200/original?country=br",
       "price": "R$ 49.99",
-      "promotional_price": null
+      "promotional_price": null,
+      "calories": "295kcal",
+      "total_fat": "15g",
+      "carbohydrates": "35g",
+      "proteins": "4.8g",
+      "allergen": {
+        "egg": false,
+        "milk": false,
+        "gluten": false,
+        "soy": true
+      }
     },
     {
       "name": "Méqui Box Clássico para 4",
       "description": "04 McOfertas médias.",
       "image": "https://cache-backend-mcd.mcdonaldscupones.com/media/image/product$ksXb0fyM/200/200/original?country=br",
       "price": "R$ 59.99",
-      "promotional_price": null
+      "promotional_price": null,
+      "calories": "295kcal",
+      "total_fat": "15g",
+      "carbohydrates": "35g",
+      "proteins": "4.8g",
+      "allergen": {
+        "egg": false,
+        "milk": false,
+        "gluten": false,
+        "soy": true
+      }
     },
     {
       "name": "Méqui box Galera",
       "description": "02 Chicken Junior, 02 Cheeseburgers, 03 McFritas Pequenas e 02 Bebidas Pequenas.",
       "image": "https://cache-backend-mcd.mcdonaldscupones.com/media/image/product$kLXJ0Q5M/200/200/original?country=br",
       "price": "R$ 69.99",
-      "promotional_price": null
+      "promotional_price": null,
+      "calories": "295kcal",
+      "total_fat": "15g",
+      "carbohydrates": "35g",
+      "proteins": "4.8g",
+      "allergen": {
+        "egg": false,
+        "milk": false,
+        "gluten": false,
+        "soy": true
+      }
     },
     {
       "name": "Méqui Box Premium para 4",
       "description": "04 McOfertas médias.",
       "image": "https://cache-backend-mcd.mcdonaldscupones.com/media/image/product$ksXrTqgG/200/200/original?country=br",
       "price": "R$ 89.99",
-      "promotional_price": null
+      "promotional_price": null,
+      "calories": "295kcal",
+      "total_fat": "15g",
+      "carbohydrates": "35g",
+      "proteins": "4.8g",
+      "allergen": {
+        "egg": false,
+        "milk": false,
+        "gluten": false,
+        "soy": true
+      }
     }
   ],
   "allProducts": [
@@ -49,77 +109,187 @@
       "description": "Um delicioso clássico. Pão tostado e quentinho, hambúrguer, cebola e picles com ketchup e mostarda.",
       "image": "https://cache-backend-mcd.mcdonaldscupones.com/media/image/product$kzXYF1Z7/200/200/original?country=br",
       "price": "R$ 6.00",
-      "promotional_price": null
+      "promotional_price": null,
+      "calories": "249kcal",
+      "total_fat": "8.4g",
+      "carbohydrates": "30g",
+      "proteins": "13g",
+      "allergen": {
+        "egg": true,
+        "milk": true,
+        "gluten": true,
+        "soy": false
+      }
     },
     {
       "name": "Cheeseburger",
       "description": "Uma fatia de queijo que faz a diferença. Pão quentinho, hambúrguer de carne 100% bovina, queijo, cebola, picles com ketchup e mostarda.",
       "image": "https://cache-backend-mcd.mcdonaldscupones.com/media/image/product$kzXJhh6f/200/200/original?country=br",
       "price": "R$ 7.00",
-      "promotional_price": null
+      "promotional_price": null,
+      "calories": "298kcal",
+      "total_fat": "12g",
+      "carbohydrates": "32g",
+      "proteins": "15g",
+      "allergen": {
+        "egg": true,
+        "milk": true,
+        "gluten": true,
+        "soy": false
+      }
     },
     {
       "name": "McDuplo",
       "description": "Dois hambúrgueres, uma explosão de sabor. Dois deliciosos hambúrgueres de carne 100% bovina, queijo cheddar derretido, picles, cebola picada, ketchup e mostarda.",
       "image": "https://cache-backend-mcd.mcdonaldscupones.com/media/image/product$kzXx4tR6/200/200/original?country=br",
       "price": "R$ 9.00",
-      "promotional_price": null
+      "promotional_price": null,
+      "calories": "298kcal",
+      "total_fat": "12g",
+      "carbohydrates": "32g",
+      "proteins": "15g",
+      "allergen": {
+        "egg": true,
+        "milk": true,
+        "gluten": true,
+        "soy": false
+      }
     },
     {
       "name": "Triplo Cheeseburger",
       "description": "O sabor de McDonald’s triplamente delicioso: com três hambúrgueres de carne 100% bovina, queijo derretido, cebola, picles, ketchup e mostarda.",
       "image": "https://cache-backend-mcd.mcdonaldscupones.com/media/image/product$kzX5tCNw/200/200/original?country=br",
       "price": "R$ 12.00",
-      "promotional_price": null
+      "promotional_price": null,
+      "calories": "298kcal",
+      "total_fat": "12g",
+      "carbohydrates": "32g",
+      "proteins": "15g",
+      "allergen": {
+        "egg": true,
+        "milk": true,
+        "gluten": true,
+        "soy": false
+      }
     },
     {
       "name": "Cheddar McMelt",
       "description": "Sem palavras para descrever. Feito com carne bovina, delicioso queijo tipo cheddar derretido, cebola grelhada ao molho shoyu e para completar um pão escuro com gergelim.",
       "image": "https://cache-backend-mcd.mcdonaldscupones.com/media/image/product$kzXv7hw4/200/200/original?country=br",
       "price": "R$ 18.00",
-      "promotional_price": null
+      "promotional_price": null,
+      "calories": "505kcal",
+      "total_fat": "29g",
+      "carbohydrates": "32g",
+      "proteins": "29g",
+      "allergen": {
+        "egg": true,
+        "milk": true,
+        "gluten": true,
+        "soy": false
+      }
     },
     {
       "name": "Quarterão com Queijo",
       "description": "Inigualável. Perfeito. Um hambúrguer feito com pura carne bovina, envolvida por duas fatias de queijo cheddar, cebola, picles e molhos ketchup e mostarda.",
       "image": "https://cache-backend-mcd.mcdonaldscupones.com/media/image/product$kzXNUCF7/200/200/original?country=br",
       "price": "R$ 20.00",
-      "promotional_price": null
+      "promotional_price": null,
+      "calories": "549kcal",
+      "total_fat": "32g",
+      "carbohydrates": "34g",
+      "proteins": "31g",
+      "allergen": {
+        "egg": true,
+        "milk": true,
+        "gluten": true,
+        "soy": false
+      }
     },
     {
       "name": "Big Mac",
       "description": "Dois hambúrgueres, alface, queijo e molho especial, cebola e picles num pão com gergelim. Com dois hambúrgueres de carne 100% bovina, queijo cheddar derretido, cebola, picles e o incrível molho Big Mac.",
       "image": "https://cache-backend-mcd.mcdonaldscupones.com/media/image/product$kzXCTbnv/200/200/original?country=br",
       "price": "R$ 22.00",
-      "promotional_price": "R$ 18.00"
+      "promotional_price": "R$ 18.00",
+      "calories": "499kcal",
+      "total_fat": "25g",
+      "carbohydrates": "42g",
+      "proteins": "26g",
+      "allergen": {
+        "egg": true,
+        "milk": true,
+        "gluten": true,
+        "soy": false
+      }
     },
     {
       "name": "McNífico Bacon",
       "description": "São 2 saborosas fatias de bacon, alface, cebola, hambúrguer de 120 gramas de carne bovina, queijo derretido, tomate e um trio de delícias: maionese, ketchup e mostarda.",
       "image": "https://cache-backend-mcd.mcdonaldscupones.com/media/image/product$kzXjtUHf/200/200/original?country=br",
       "price": "R$ 23.00",
-      "promotional_price": null
+      "promotional_price": null,
+      "calories": "640kcal",
+      "total_fat": "40g",
+      "carbohydrates": "36g",
+      "proteins": "34g",
+      "allergen": {
+        "egg": true,
+        "milk": true,
+        "gluten": true,
+        "soy": false
+      }
     },
     {
       "name": "McFritas Pequena",
       "description": "A batata frita mais famosa do mundo. Deliciosas batatas selecionadas, fritas, crocantes por fora, macias por dentro, douradas, irresistíveis, saborosas, famosas, e todos os outros adjetivos positivos que você quiser dar.",
       "image": "https://cache-backend-mcd.mcdonaldscupones.com/media/image/product$kUXgPmuC/200/200/original?country=br",
       "price": "R$ 5.00",
-      "promotional_price": null
+      "promotional_price": null,
+      "calories": "211kcal",
+      "total_fat": "10.8g",
+      "carbohydrates": "25g",
+      "proteins": "3.4g",
+      "allergen": {
+        "egg": false,
+        "milk": false,
+        "gluten": false,
+        "soy": true
+      }
     },
     {
       "name": "McFritas Média",
       "description": "A batata frita mais famosa do mundo. Deliciosas batatas selecionadas, fritas, crocantes por fora, macias por dentro, douradas, irresistíveis, saborosas, famosas, e todos os outros adjetivos positivos que você quiser dar.",
       "image": "https://cache-backend-mcd.mcdonaldscupones.com/media/image/product$kUXGZHtB/200/200/original?country=br",
       "price": "R$ 7.00",
-      "promotional_price": null
+      "promotional_price": null,
+      "calories": "295kcal",
+      "total_fat": "15g",
+      "carbohydrates": "35g",
+      "proteins": "4.8g",
+      "allergen": {
+        "egg": false,
+        "milk": false,
+        "gluten": false,
+        "soy": true
+      }
     },
     {
       "name": "McFritas Grande",
       "description": "A batata frita mais famosa do mundo. Deliciosas batatas selecionadas, fritas, crocantes por fora, macias por dentro, douradas, irresistíveis, saborosas, famosas, e todos os outros adjetivos positivos que você quiser dar.",
       "image": "https://cache-backend-mcd.mcdonaldscupones.com/media/image/product$kUXVg4F7/200/200/original?country=br",
       "price": "R$ 10.00",
-      "promotional_price": null
+      "promotional_price": null,
+      "calories": "422kcal",
+      "total_fat": "22g",
+      "carbohydrates": "50g",
+      "proteins": "6.9g",
+      "allergen": {
+        "egg": false,
+        "milk": false,
+        "gluten": false,
+        "soy": true
+      }
     }
   ]
 }

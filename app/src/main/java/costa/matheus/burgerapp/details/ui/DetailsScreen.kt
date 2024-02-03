@@ -1,11 +1,14 @@
 package costa.matheus.burgerapp.details.ui
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ArrowBack
@@ -18,6 +21,7 @@ import androidx.compose.material3.Text
 import androidx.compose.material3.TopAppBar
 import androidx.compose.material3.TopAppBarDefaults
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
@@ -32,6 +36,7 @@ import coil.compose.AsyncImage
 import costa.matheus.burgerapp.R
 import costa.matheus.burgerapp.products.ui.fakeProduct
 import costa.matheus.domain.entities.Product
+import org.intellij.lang.annotations.JdkConstants.HorizontalAlignment
 
 @Composable
 fun DetailsScreen(
@@ -74,6 +79,7 @@ fun DetailsScreen(
                 ) {
                     Column(
                         modifier = Modifier
+                            .background(Color.White)
                             .padding(24.dp)
                             .fillMaxSize()
                     ) {
@@ -94,6 +100,10 @@ fun DetailsScreen(
                             modifier = Modifier
                                 .padding(top = 8.dp)
                         )
+
+                        NutritionFactsBlock(product = product)
+
+                        AllergenBlock(product = product)
 
                         Text(
                             text = product.price,
@@ -130,6 +140,151 @@ fun DetailsTopAppBar(
         colors = TopAppBarDefaults.topAppBarColors(
             containerColor = Color(0XFFFFB08F)
         )
+    )
+}
+
+@Composable
+fun NutritionFactsBlock(product: Product) {
+    Row (
+        horizontalArrangement = Arrangement.SpaceEvenly,
+        modifier = Modifier
+            .background(Color.White)
+            .fillMaxWidth()
+            .padding(top = 16.dp)
+    ){
+        NutritionFactsItem(
+            name = "Calorias",
+            value = product.calories
+        )
+        NutritionFactsItem(
+            name = "Gordura Total",
+            value = product.totalFat
+        )
+        NutritionFactsItem(
+            name = "Carboidratos",
+            value = product.carbohydrates
+        )
+        NutritionFactsItem(
+            name = "Proteínas",
+            value = product.proteins
+        )
+    }
+}
+
+@Composable
+@Preview
+fun NutritionFactsBlockPreview() {
+    NutritionFactsBlock(fakeProduct)
+}
+
+@Composable
+fun NutritionFactsItem(
+    name: String,
+    value: String
+) {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = Modifier
+            .background(Color.White)
+    ) {
+        Text(
+            text = value,
+            fontSize = 18.sp,
+            textAlign = TextAlign.Center,
+            fontWeight = FontWeight.Bold
+        )
+
+        Text(
+            text = name,
+            fontSize = 16.sp,
+            textAlign = TextAlign.Center
+        )
+    }
+}
+
+@Composable
+@Preview
+fun NutritionFactsItemPreview() {
+    NutritionFactsItem(
+        name = "Calorias",
+        value = "1000kcal"
+    )
+}
+
+@Composable
+fun AllergenBlock(product: Product) {
+    Row (
+        horizontalArrangement = Arrangement.SpaceEvenly,
+        modifier = Modifier
+            .background(Color.White)
+            .fillMaxWidth()
+            .padding(top = 16.dp)
+    ){
+        if (product.allergen.egg) {
+            AllergenItem(
+                name = "Ovo",
+                imageDrawable = R.drawable.egg
+            )
+        }
+
+        if (product.allergen.gluten) {
+            AllergenItem(
+                name = "Gluten",
+                imageDrawable = R.drawable.gluten
+            )
+        }
+
+        if (product.allergen.milk) {
+            AllergenItem(
+                name = "Leite",
+                imageDrawable = R.drawable.milk
+            )
+        }
+
+        if (product.allergen.soy) {
+            AllergenItem(
+                name = "Soja",
+                imageDrawable = R.drawable.soy
+            )
+        }
+    }
+}
+
+@Composable
+@Preview
+fun AllergenBlockPreview() {
+    AllergenBlock(fakeProduct)
+}
+
+@Composable
+fun AllergenItem(
+    name: String,
+    imageDrawable: Int
+) {
+    Column(
+        horizontalAlignment = Alignment.CenterHorizontally,
+        modifier = Modifier
+            .background(Color.White)
+    ) {
+        Image(
+            painter = painterResource(id = imageDrawable),
+            contentDescription = name
+        )
+
+        Text(
+            text = name,
+            fontSize = 16.sp,
+            textAlign = TextAlign.Center
+        )
+    }
+}
+
+@Composable
+@Preview
+fun AllergenItemPreview() {
+    AllergenItem(
+        name = "Ovo",
+        imageDrawable = R.drawable.egg
     )
 }
 

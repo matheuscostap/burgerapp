@@ -1,7 +1,9 @@
 package costa.matheus.data.mapper
 
+import costa.matheus.data.model.AllergenModel
 import costa.matheus.data.model.ProductModel
 import costa.matheus.data.model.ProductsPageResponse
+import costa.matheus.domain.entities.Allergen
 import costa.matheus.domain.entities.Product
 import costa.matheus.domain.entities.Section
 import costa.matheus.domain.entities.SectionType
@@ -28,7 +30,17 @@ class AllProductsMapper {
         description = productModel.description,
         image = productModel.image,
         price = productModel.price,
-        promotional_price = productModel.promotional_price
+        promotionalPrice = productModel.promotional_price,
+        calories = productModel.calories,
+        totalFat = productModel.total_fat,
+        carbohydrates = productModel.carbohydrates,
+        proteins = productModel.proteins,
+        allergen = Allergen(
+            egg = productModel.allergen.egg,
+            milk = productModel.allergen.milk,
+            gluten = productModel.allergen.gluten,
+            soy = productModel.allergen.soy
+        )
     )
 
 }

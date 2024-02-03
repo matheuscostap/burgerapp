@@ -7,5 +7,10 @@ data class Product (
     val description: String,
     val image: String,
     val price: String,
-    val promotional_price: String?
+    val promotionalPrice: String?,
+    val calories: String,
+    val totalFat: String,
+    val carbohydrates: String,
+    val proteins: String,
+    val allergen: Allergen
 ): Serializable

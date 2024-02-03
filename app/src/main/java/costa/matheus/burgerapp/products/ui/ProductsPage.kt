@@ -34,6 +34,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import costa.matheus.burgerapp.R
+import costa.matheus.domain.entities.Allergen
 import costa.matheus.domain.entities.DayOfferEntity
 import costa.matheus.domain.entities.Product
 
@@ -353,5 +354,16 @@ val fakeProduct = Product(
     image = "",
     description = "Três hambúrgueres (100% carne bovina), queijo sabor cheddar, cebola, picles, ketchup, mostarda e pão com gergelim.",
     price = "R$32.00",
-    promotional_price = null
+    promotionalPrice = null,
+    calories = "1000kcal",
+    totalFat = "100g",
+    carbohydrates = "100g",
+    proteins = "100g",
+    allergen = Allergen(
+        egg = true,
+        milk = true,
+        gluten = true,
+        soy = true
+    )
+
 )
