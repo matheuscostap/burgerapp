@@ -63,8 +63,8 @@ fun DetailsScreen(
             ) {
                 AsyncImage(
                     model = product.image,
-                    placeholder = painterResource(id = R.drawable.ic_launcher_foreground),
-                    fallback = painterResource(id = R.drawable.ic_launcher_foreground),
+                    placeholder = painterResource(id = R.drawable.burger_placeholder),
+                    error = painterResource(id = R.drawable.burger_placeholder),
                     contentDescription = "Foto do hamburguer",
                     contentScale = ContentScale.Fit,
                     modifier = Modifier

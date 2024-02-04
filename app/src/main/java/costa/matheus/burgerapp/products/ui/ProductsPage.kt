@@ -103,8 +103,8 @@ fun ProductItem(
         ) {
             AsyncImage(
                 model = product.image,
-                placeholder = painterResource(id = R.drawable.ic_launcher_foreground),
-                fallback = painterResource(id = R.drawable.ic_launcher_foreground),
+                placeholder = painterResource(id = R.drawable.burger_placeholder),
+                error = painterResource(id = R.drawable.burger_placeholder),
                 contentDescription = "Burger photo",
                 modifier = Modifier.
                     size(80.dp)
@@ -257,8 +257,8 @@ fun ComboProductItem(
 
                 AsyncImage(
                     model = product.image,
-                    placeholder = painterResource(id = R.drawable.ic_launcher_foreground),
-                    fallback = painterResource(id = R.drawable.ic_launcher_foreground),
+                    placeholder = painterResource(id = R.drawable.burger_placeholder),
+                    error = painterResource(id = R.drawable.burger_placeholder),
                     contentScale = ContentScale.Fit,
                     contentDescription = "",
                     modifier = Modifier
@@ -297,8 +297,8 @@ fun DayOfferItem(
     ) {
         AsyncImage(
             model = dayOfferEntity.image,
-            placeholder = painterResource(id = R.drawable.ic_launcher_foreground),
-            fallback = painterResource(id = R.drawable.ic_launcher_foreground),
+            placeholder = painterResource(id = R.drawable.burger_placeholder),
+            error = painterResource(id = R.drawable.burger_placeholder),
             contentDescription = "",
             contentScale = ContentScale.FillBounds,
             modifier = Modifier
