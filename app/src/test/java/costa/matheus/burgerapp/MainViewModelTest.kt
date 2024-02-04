@@ -7,6 +7,7 @@ import com.nhaarman.mockitokotlin2.whenever
 import costa.matheus.burgerapp.products.MainViewModel
 import costa.matheus.burgerapp.products.ui.UiObject
 import costa.matheus.domain.entities.DayOfferEntity
+import costa.matheus.domain.entities.Section
 import costa.matheus.domain.usecases.GetAllProductsUseCase
 import costa.matheus.domain.usecases.GetDayOfferUseCase
 import kotlinx.coroutines.CompletableDeferred
@@ -155,5 +156,30 @@ class MainViewModelTest {
         }
 
         job.cancel()
+    }
+
+    @Test
+    fun `getAllProducts() should return UiObjects in the right order`() = rule.runTest{
+        // Arrange
+        val productsApiReturn = mutableListOf<Section>()
+        productsApiReturn.addAll(Stubs.getNormalSectionStub())
+        productsApiReturn.addAll(Stubs.getHighlightSectionStub())
+
+        val dayOfferApiReturn = DayOfferEntity("")
+
+        whenever(getAllProductsUseCase.call()) doReturn CompletableDeferred(productsApiReturn)
+        whenever(getDayOfferUseCase.call()) doReturn CompletableDeferred(dayOfferApiReturn)
+
+        // Act
+        viewModel.getAllProducts()
+        runCurrent()
+        val currentState = viewModel.state.value
+
+        // Assert
+        Assert.assertTrue((currentState as ViewState.Success).data?.get(0) is UiObject.DayOffer)
+        Assert.assertTrue(currentState.data?.get(1) is UiObject.Title)
+        Assert.assertTrue(currentState.data?.get(2) is UiObject.Offer)
+        Assert.assertTrue(currentState.data?.get(3) is UiObject.Title)
+        Assert.assertTrue(currentState.data?.get(4) is UiObject.Highlighted)
     }
 }
