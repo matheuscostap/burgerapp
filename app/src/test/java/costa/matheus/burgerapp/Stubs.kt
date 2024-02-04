@@ -13,22 +13,22 @@ object Stubs {
                 title = "title",
                 products = listOf(
                     Product(
-                    name = "name",
-                    description = "description",
-                    image = "image",
-                    price = "price",
-                    promotionalPrice = "promotional_price",
-                    calories = "calories",
-                    totalFat = "total_fat",
-                    carbohydrates = "carbohydrates",
-                    proteins = "proteins",
-                    allergen = Allergen(
-                        egg = true,
-                        milk = true,
-                        gluten = true,
-                        soy = true
+                        name = "name",
+                        description = "description",
+                        image = "image",
+                        price = "price",
+                        promotionalPrice = "promotional_price",
+                        calories = "calories",
+                        totalFat = "total_fat",
+                        carbohydrates = "carbohydrates",
+                        proteins = "proteins",
+                        allergen = Allergen(
+                            egg = true,
+                            milk = true,
+                            gluten = true,
+                            soy = true
+                        )
                     )
-                )
                 ),
                 sectionType = SectionType.NORMAL
             )
