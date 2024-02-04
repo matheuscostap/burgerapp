@@ -8,9 +8,9 @@ import androidx.activity.viewModels
 import androidx.compose.runtime.collectAsState
 import costa.matheus.burgerapp.details.DetailsActivity
 import costa.matheus.burgerapp.products.ui.MainScreen
-import costa.matheus.burgerapp.products.ui.OnProductClick
-import costa.matheus.burgerapp.products.ui.OnTryAgainClick
-import costa.matheus.burgerapp.products.ui.ProductsPageEvent
+import costa.matheus.burgerapp.products.ui.pages.OnProductClick
+import costa.matheus.burgerapp.products.ui.pages.OnTryAgainClick
+import costa.matheus.burgerapp.products.ui.pages.ProductsPageEvent
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

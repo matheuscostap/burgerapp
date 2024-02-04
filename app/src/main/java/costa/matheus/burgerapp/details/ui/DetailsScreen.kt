@@ -38,10 +38,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import costa.matheus.burgerapp.R
-import costa.matheus.burgerapp.products.ui.fakeProduct
+import costa.matheus.burgerapp.products.ui.pages.fakeProduct
 import costa.matheus.burgerapp.ui.font.Jost
 import costa.matheus.domain.entities.Product
-import org.intellij.lang.annotations.JdkConstants.HorizontalAlignment
 
 @Composable
 fun DetailsScreen(

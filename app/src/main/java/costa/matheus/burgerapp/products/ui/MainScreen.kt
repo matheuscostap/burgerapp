@@ -15,6 +15,10 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.sp
 import costa.matheus.burgerapp.ViewState
+import costa.matheus.burgerapp.products.ui.pages.ErrorPage
+import costa.matheus.burgerapp.products.ui.pages.LoadingPage
+import costa.matheus.burgerapp.products.ui.pages.ProductsPage
+import costa.matheus.burgerapp.products.ui.pages.ProductsPageEvent
 import costa.matheus.burgerapp.ui.font.Jost
 
 

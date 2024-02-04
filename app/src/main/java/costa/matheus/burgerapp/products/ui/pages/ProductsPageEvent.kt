@@ -1,4 +1,4 @@
-package costa.matheus.burgerapp.products.ui
+package costa.matheus.burgerapp.products.ui.pages
 
 import costa.matheus.domain.entities.Product
 
