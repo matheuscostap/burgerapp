@@ -6,11 +6,7 @@ import com.nhaarman.mockitokotlin2.mock
 import com.nhaarman.mockitokotlin2.whenever
 import costa.matheus.burgerapp.products.MainViewModel
 import costa.matheus.burgerapp.products.ui.UiObject
-import costa.matheus.domain.entities.Allergen
 import costa.matheus.domain.entities.DayOfferEntity
-import costa.matheus.domain.entities.Product
-import costa.matheus.domain.entities.Section
-import costa.matheus.domain.entities.SectionType
 import costa.matheus.domain.usecases.GetAllProductsUseCase
 import costa.matheus.domain.usecases.GetDayOfferUseCase
 import kotlinx.coroutines.CompletableDeferred
@@ -56,7 +52,7 @@ class MainViewModelTest {
     @Test
     fun `viewmodel success state test`() = rule.runTest {
         // Arrange
-        val productsApiReturn = getStubProductsApiReturn()
+        val productsApiReturn = Stubs.getNormalSectionStub()
         val dayOfferApiReturn = DayOfferEntity("")
 
         whenever(getAllProductsUseCase.call()) doReturn CompletableDeferred(productsApiReturn)
@@ -97,7 +93,7 @@ class MainViewModelTest {
             viewModel.state.toList(statesHistory)
         }
 
-        val productsApiReturn = getStubProductsApiReturn()
+        val productsApiReturn = Stubs.getNormalSectionStub()
         val dayOfferApiReturn = DayOfferEntity("")
 
         whenever(getAllProductsUseCase.call()) doReturn CompletableDeferred(productsApiReturn)
@@ -159,31 +155,5 @@ class MainViewModelTest {
         }
 
         job.cancel()
-    }
-
-    private fun getStubProductsApiReturn(): List<Section> {
-        return listOf(
-            Section(
-                title = "title",
-                products = listOf(Product(
-                    name = "name",
-                    description = "description",
-                    image = "image",
-                    price = "price",
-                    promotionalPrice = "promotional_price",
-                    calories = "calories",
-                    totalFat = "total_fat",
-                    carbohydrates = "carbohydrates",
-                    proteins = "proteins",
-                    allergen = Allergen(
-                        egg = true,
-                        milk = true,
-                        gluten = true,
-                        soy = true
-                    )
-                )),
-                sectionType = SectionType.NORMAL
-            )
-        )
     }
 }
