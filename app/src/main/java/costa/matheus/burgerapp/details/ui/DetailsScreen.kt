@@ -7,8 +7,10 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -37,6 +39,7 @@ import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import costa.matheus.burgerapp.R
 import costa.matheus.burgerapp.products.ui.fakeProduct
+import costa.matheus.burgerapp.ui.font.Jost
 import costa.matheus.domain.entities.Product
 import org.intellij.lang.annotations.JdkConstants.HorizontalAlignment
 
@@ -81,52 +84,57 @@ fun DetailsScreen(
                 ) {
                     Column(
                         modifier = Modifier
+                            .verticalScroll(rememberScrollState())
                             .background(Color.White)
                             .padding(24.dp)
                             .fillMaxSize()
                     ) {
                         Text(
+                            fontFamily = Jost,
                             text = product.name,
                             fontWeight = FontWeight.Bold,
                             fontSize = 22.sp,
                             color = Color.Black,
                             modifier = Modifier
-                                .weight(0.5f)
+                                .wrapContentHeight()
                                 .fillMaxWidth()
                         )
 
                         Text(
+                            fontFamily = Jost,
+                            text = product.price,
+                            fontSize = 18.sp,
+                            color = Color.Black,
+                            textAlign = TextAlign.Start,
+                            modifier = Modifier
+                                .wrapContentHeight()
+                                .fillMaxWidth()
+                        )
+
+                        Text(
+                            fontFamily = Jost,
                             text = product.description,
                             overflow = TextOverflow.Ellipsis,
                             fontSize = 16.sp,
                             color = Color.Gray,
                             modifier = Modifier
                                 .padding(top = 8.dp)
+                                .wrapContentHeight()
                         )
 
                         Column(
                             modifier = Modifier
-                                .weight(2f)
+                                .wrapContentHeight()
                         ){
                             NutritionFactsBlock(product = product)
                         }
 
                         Column(
                             modifier = Modifier
-                                .weight(2f)
+                                .wrapContentHeight()
                         ){
                             AllergenBlock(product = product)
                         }
-
-                        Text(
-                            text = product.price,
-                            fontSize = 20.sp,
-                            color = Color.Black,
-                            textAlign = TextAlign.End,
-                            modifier = Modifier
-                                .weight(0.5f)
-                                .fillMaxWidth()
-                        )
                     }
                 }
             }
@@ -163,7 +171,8 @@ fun NutritionFactsBlock(product: Product) {
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.spacedBy(8.dp),
         modifier = Modifier
-            .fillMaxSize()
+            .fillMaxWidth()
+            .wrapContentHeight()
             .padding(top = 24.dp)
     ) {
         Row (
@@ -212,6 +221,7 @@ fun NutritionFactsItem(
             .background(Color.White)
     ) {
         Text(
+            fontFamily = Jost,
             text = value,
             fontSize = 18.sp,
             textAlign = TextAlign.Center,
@@ -219,6 +229,7 @@ fun NutritionFactsItem(
         )
 
         Text(
+            fontFamily = Jost,
             text = name,
             fontSize = 16.sp,
             textAlign = TextAlign.Center,
@@ -242,7 +253,8 @@ fun AllergenBlock(product: Product) {
     Row (
         horizontalArrangement = Arrangement.SpaceEvenly,
         modifier = Modifier
-            .fillMaxSize()
+            .fillMaxWidth()
+            .wrapContentHeight()
             .padding(top = 16.dp)
     ){
         if (product.allergen.egg) {
@@ -297,6 +309,7 @@ fun AllergenItem(
         )
 
         Text(
+            fontFamily = Jost,
             text = name,
             fontSize = 16.sp,
             textAlign = TextAlign.Center

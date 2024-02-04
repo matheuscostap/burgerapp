@@ -34,6 +34,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import coil.compose.AsyncImage
 import costa.matheus.burgerapp.R
+import costa.matheus.burgerapp.ui.font.Jost
 import costa.matheus.domain.entities.Allergen
 import costa.matheus.domain.entities.DayOfferEntity
 import costa.matheus.domain.entities.Product
@@ -119,6 +120,7 @@ fun ProductItem(
                         .fillMaxWidth()
                 ) {
                     Text(
+                        fontFamily = Jost,
                         fontSize = 16.sp,
                         color = Color.Black,
                         text = product.name,
@@ -126,16 +128,18 @@ fun ProductItem(
                             .weight(3f)
                     )
                     Text(
+                        fontFamily = Jost,
                         fontSize = 16.sp,
                         color = Color.Black,
                         text = product.price,
                         textAlign = TextAlign.End,
                         modifier = Modifier
-                            .weight(1f)
+                            .weight(1.5f)
                     )
                 }
 
                 Text(
+                    fontFamily = Jost,
                     text = product.description,
                     fontSize = 14.sp,
                     color = Color.Gray,
@@ -156,6 +160,7 @@ fun TitleItem(title: UiObject.Title) {
             .fillMaxWidth()
     ) {
         Text(
+            fontFamily = Jost,
             text = title.title,
             fontSize = 20.sp,
             color = Color(0XFFFF611d),
@@ -226,6 +231,7 @@ fun ComboProductItem(
                     .weight(5f)
             ) {
                 Text(
+                    fontFamily = Jost,
                     text = product.name,
                     fontSize = 16.sp,
                     color = Color.White,
@@ -237,6 +243,7 @@ fun ComboProductItem(
                 )
 
                 Text(
+                    fontFamily = Jost,
                     text = product.description,
                     overflow = TextOverflow.Ellipsis,
                     maxLines = 2,
@@ -261,6 +268,7 @@ fun ComboProductItem(
             }
 
             Text(
+                fontFamily = Jost,
                 text = product.price,
                 fontSize = 16.sp,
                 color = Color.White,
@@ -350,7 +358,7 @@ fun ProductListPreview() {
 }
 
 val fakeProduct = Product(
-    name = "BigMac",
+    name = "Quarterão com Queijo",
     image = "",
     description = "Três hambúrgueres (100% carne bovina), queijo sabor cheddar, cebola, picles, ketchup, mostarda e pão com gergelim.",
     price = "R$32.00",
