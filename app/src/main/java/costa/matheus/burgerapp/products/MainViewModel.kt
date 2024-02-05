@@ -37,7 +37,7 @@ class MainViewModel @Inject constructor(
 
                 _state.value = ViewState.Success(page)
             } catch (t: Throwable) {
-                _state.value = ViewState.Error(t, false)
+                _state.value = ViewState.Error(t)
             }
         }
     }
