@@ -2,7 +2,7 @@
 
 ![](https://github.com/matheuscostap/burgerapp/blob/main/burger.gif?raw=true)
 
-Uma hamburgueria necessitava de um aplicativo para exibir o seu cardápio aos clientes e também dar algum destaque para determinados lanches.
+Uma hamburgueria necessita de um aplicativo para exibir o seu cardápio aos clientes e também dar algum destaque para determinados lanches.
 
 Esse aplicativo tem o objetivo de resolver esse problema possibilitando a exibição do cardápio completo da hamburgueria em formato de lista, com áreas para itens em destaque e um banner no topo para comunicação em formato de imagem. Também é possível visualizar mais informações dos lanches, como informações nutricionais e informações de alérgenos.
 
